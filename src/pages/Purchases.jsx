@@ -6,12 +6,12 @@ import getConfig from "../utils/getConfig";
 
 const Purchases = () => {
 
-    const [store, setStore] = useState([])
+    const [purchases, setPurchases] = useState([])
 
     useEffect(() => {
         axios
             .get('https://e-commerce-api-v2.academlo.tech/api/v1/purchases', getConfig())
-            .then(resp => setStore(resp.data))
+            .then(resp => setPurchases(resp.data))
             .catch(error => console.error(error))
         
     },[])
@@ -19,7 +19,7 @@ const Purchases = () => {
     
     return (
         <div className="purchases-container">
-            { store.map(item => {
+            { purchases.map(item => {
                 const date = new Date(item.updatedAt)
                 const formattedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
                 return(
@@ -28,7 +28,7 @@ const Purchases = () => {
                     <div><h3>{item.product?.title}</h3></div>
                     <div><p>{formattedDate}</p></div>
                     <div>{item.quantity}</div>
-                    <div><p>$ {item.product.price}</p></div>            
+                    <div><p>$ {item.product.price*item.quantity}</p></div>            
                 </div>
             )})
            
