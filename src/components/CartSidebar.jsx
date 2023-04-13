@@ -11,11 +11,12 @@ const CartSidebar = ({show, handleClose}) => {
     const dispatch = useDispatch()
     const products = useSelector(state => state.cart)
    
-   
+   const token = localStorage.getItem("token")
 
     useEffect(() => {
-        dispatch(getCartThunk())
-    },[])
+        if (token) dispatch(getCartThunk())
+        
+    },[token])
 
     return (
         <Offcanvas show={show} onHide={handleClose} placement={'end'}>
