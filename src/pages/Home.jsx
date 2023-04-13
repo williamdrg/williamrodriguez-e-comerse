@@ -74,7 +74,7 @@ const Home = () => {
                             <Card.Img 
                             variant="top" 
                             src={product.images[0].url} 
-                            style={{height: 200, objectFit: "cover"}}
+                            // style={{height: 200, objectFit: "cover"}}
                             />
                             <Card.Body>
                                 <Card.Title>{product.brand}</Card.Title>

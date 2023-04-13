@@ -1,11 +1,9 @@
 
-.card {
-    height: 250px;
-    border: 20px solid black;
-}
-
-.card-img-top{
-    height: 100%;
+.card img{
+    width: 80%;
+    height: 200px;
+    padding: 0.5rem;
+    margin: auto;
 }
 
 .loader_container {
@@ -134,18 +132,114 @@
 
 
 .carousel-indicators {
-  background-color: #051961;
-  border: 1px solid black;
+  background-color: rgba(106, 68, 243, 0.769);
+  
 }
 
-/* Cambiar el color de los botones */
+
+.price {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.counter{
+  align-self: flex-end;
+  display: flex;
+  gap: 1rem;
+  /* border: 1px solid black; */
+  justify-content: flex-end;
+
+}
+
+.counter h3 {
+  margin-top:5px;
+  font-size: 1.3rem;
+}
+
+.counter button {
+  height: 2rem;
+  width: 2rem;
+  margin: auto;
+  padding: 0;
+
+}
+
+/* imagen del producto en el carrito de compra */
+.imgProduct {
+  width: 100px;
+}
+
+.productCart {
+  border-bottom: 2px solid rgb(50, 1, 244);
+  padding: 0.5rem;
+  position: relative;
+}
+
+.productCart h5 {
+  font-size: 1rem;
+}
+
+.delete{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px 20px;
+  font-size: 1.1rem;
+  color: rgb(202, 4, 4);
+}
 
 
+/* datos del formulario */
 
-/* .carousel-indicators .active {
-  background-color: green; 
-  border-color: yellow; 
-} */
+.dataForm {
+  text-align: center;
+}
+
+.fa-solid {
+  cursor: pointer;
+}
+
+.checkout {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* purchases */
+
+.purchases {
+  /* border: 1px solid black; */
+  display: flex;
+  gap: 2rem;
+  margin-top: 20px;
+}
+
+.purchases > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.purchases img {
+  width: 150px;
+}
+
+.purchases  h3 {
+  font-size: 1.2rem;
+}
+
+.purchases p {
+  padding-top:8px;
+  font-size: 1rem;
+  color: gray;
+}
 
 
 
